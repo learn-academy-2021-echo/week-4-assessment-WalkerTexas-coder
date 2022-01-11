@@ -9,6 +9,17 @@ num2 = 42
 # Expected output: '42 is even'
 num3 = 221
 # Expected output: '221 is odd'
+def is_even_or_odd number
+    if number % 2 == 0
+        "#{number} is even"
+    else
+        "#{number} is odd"
+    end
+end
+
+puts is_even_or_odd num1
+puts is_even_or_odd num2
+puts is_even_or_odd num3
 
 
 
@@ -21,6 +32,21 @@ album2 = 'Sgt Pepper'
 album3 = 'Abbey Road'
 # Expected output: 'bby Rd'
 
+# def no_vowels(string) 
+#     string.gsub(/[aeiou]/i,"")
+# end
+
+# def no_vowels(string) 
+#     string.delete'aeiouAEIOU'
+# end
+
+# def no_vowels(string) 
+#     result = string.gsub(/[aeiou]/i,"")
+#     result
+# end
+# p no_vowels album1
+# p no_vowels album2
+# p no_vowels album3
 
 
 # -------------------3) Create a method that takes in a string and checks if the string is a palindrome. A palindrome is the same word spelled forwards or backwards. Use the test variables provided.
@@ -31,3 +57,15 @@ is_palindrome2 = 'LEARN'
 # Expected output: 'LEARN is not a palindrome'
 is_palindrome3 = 'Rotator'
 # Expected output: 'Rotator is a palindrome'
+
+def palindrome string
+    if string.reverse.downcase == string.downcase
+        puts "#{string} is a plaindrome"
+    else
+        puts "#{string} is not a palindrome"
+    end
+end
+
+palindrome is_palindrome1
+palindrome is_palindrome2
+palindrome is_palindrome3
